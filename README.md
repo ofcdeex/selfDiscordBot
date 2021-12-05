@@ -33,5 +33,5 @@ BulletBotDiscord.GetUsers().then(resp => {
 BulletBotDiscord.SendPrivateMessage("hello world!");
 ```
 
-<h2>📖 Terms</h2>
+<h2>📖 Attention!</h2>
 I am not responsible for the improper use of this project. Remember that mass messages is against Discord's terms of use, using for such actions is putting your account at risk.
