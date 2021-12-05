@@ -29,7 +29,7 @@ BulletBotDiscord.GetUsers().then(resp => {
     });
 });
 
-// Send message to channel or on DM
+// Send message to channel or DM
 BulletBotDiscord.SendPrivateMessage("hello world!");
 ```
 
