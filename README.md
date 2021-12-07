@@ -11,26 +11,27 @@ npm install
 
 ```js
 {
- "token": "Your account token here",
- "channelid": "Your channel ID here"
+ "token": "Your account token here"
 }
 ```
 
 <h2>🚀 API Functions</h2>
 
 ```js
-const BulletBotDiscord = require('./Functions/Helpers');
+const BulletBotDiscord = require('./Functions/Methods');
 
-
-// Get a last 100 messages send on channel
-BulletBotDiscord.GetUsers().then(resp => {
+//Get last 100 messages send on channel
+BulletBotDiscord.GetMessages("CHANNEL ID").then(resp => {
     resp.forEach(element => {
         console.log(`ID: ${element.author.id}\nUsername: ${element.author.username}\nMessage: ${element.content}\n\n`);
     });
 });
 
-// Send message to channel or DM
-BulletBotDiscord.SendPrivateMessage("hello world!");
+//Send message to Channel or DM
+BulletBotDiscord.SendMessage("CHANNEL ID", "hello world!");
+
+//Delete message of channel or DM
+BulletBotDiscord.DeleteMessage("CHANNEL ID", "MESSAGE ID");
 ```
 
 <h2>📖 Attention!</h2>
