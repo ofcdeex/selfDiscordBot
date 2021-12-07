@@ -20,7 +20,7 @@ npm install
 ```js
 const BulletBotDiscord = require('./Functions/Methods');
 
-//Get last 100 messages send on channel
+//Get last 100 messages send on channel or DM
 BulletBotDiscord.GetMessages("CHANNEL ID").then(resp => {
     resp.forEach(element => {
         console.log(`ID: ${element.author.id}\nUsername: ${element.author.username}\nMessage: ${element.content}\n\n`);
