@@ -19,7 +19,7 @@ function SendMessage(channelid, message) {
     }).then(response => {
         console.log("Message has been sent");
     }).catch(err => {
-        return err;
+        console.log("error: " + err);
     });
 }
 
@@ -36,7 +36,7 @@ function DeleteMessage(channelid, messageid){
     }).then(response => {
         console.log("Message has been deleted");
     }).catch(err => {
-        return err;
+        console.log("error: " + err);
     });
 }
 
@@ -49,12 +49,32 @@ function GetMessages(channelid) {
     }).then(response => {
         return response.data;
     }).catch((error) => {
-        return error;
+        console.log("error: " + error);
+    });
+}
+
+function GetDmId(userid){
+    return axios({
+        url: 'https://discord.com/api/v9/users/@me/channels',
+        method: 'POST',
+        headers: {
+            'authorization': config.token,
+            'content-type': 'application/json',
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) discord/1.0.9003 Chrome/91.0.4472.164 Electron/13.4.0 Safari/537.36'
+        },
+        data: {
+            recipients: [userid]
+        }
+    }).then(response => {
+        return response.data.id;
+    }).catch(err => {
+        console.log("error: " + err);
     });
 }
 
 module.exports = {
     GetMessages,
     SendMessage,
-    DeleteMessage
+    DeleteMessage,
+    GetDmId
 }
