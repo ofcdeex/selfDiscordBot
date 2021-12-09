@@ -27,7 +27,7 @@ BulletBotDiscord.GetMessages("CHANNEL ID").then(resp => {
     });
 });
 
-// Send message to Channel or DM
+// Send message to channel or DM
 BulletBotDiscord.SendMessage("CHANNEL ID OR DM ID", "hello world!");
 
 // Delete message of channel or DM
