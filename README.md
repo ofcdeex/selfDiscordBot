@@ -15,7 +15,7 @@ npm install
 }
 ```
 
-<h2>🚀 API Functions</h2>
+<h2>🚀 API References</h2>
 
 ```js
 const BulletBotDiscord = require('./Functions/Methods');
