@@ -1,6 +1,6 @@
-# BulletBotDiscord
+# selfDiscordBot
 
-BulletBotDiscord is a Self API for development of selfbots in Discord.
+selfDiscordBot is a Self API for development of selfbots in Discord.
 
 <h2>📥 Install dependencies</h2>
 <pre>
