@@ -11,9 +11,7 @@ BulletBotDiscord.GetMessages("CHANNEL ID").then(resp => {
 BulletBotDiscord.SendMessage("CHANNEL ID OR DM ID", "hello world!");
 
 // Delete message of channel or DM
-BulletBotDiscord.DeleteMessage("CHANNEL ID OR DM ID", "MESSAGE ID").then(resp => {
-
-});
+BulletBotDiscord.DeleteMessage("CHANNEL ID OR DM ID", "MESSAGE ID");
 
 // Get user ID Direct message to send private message
 BulletBotDiscord.GetDmId("USER ID").then(resp => {
